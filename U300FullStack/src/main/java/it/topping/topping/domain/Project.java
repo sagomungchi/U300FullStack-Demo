@@ -1,6 +1,10 @@
 package it.topping.topping.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 @Entity
@@ -9,13 +13,26 @@ public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @NotBlank(message = "Project Name is Required")
     private String projectName;
+
+    @NotBlank(message = "Project Identifier is Required")
+    @Size(min = 4, max = 5, message = "Please use 4 to 5 characters")
+    @Column(updatable = false, unique = true)
     private String projectIdentifier;
-    private String descprtion;
-    private Date steart_date;
+
+    @NotBlank(message = "Project Description is required")
+    private String description;
+
+    @JsonFormat(pattern = "yyyy-mm-dd")
+    private Date start_date;
+    @JsonFormat(pattern = "yyyy-mm-dd")
     private Date end_date;
 
+    @JsonFormat(pattern = "yyyy-mm-dd")
     private Date created_at;
+    @JsonFormat(pattern = "yyyy-mm-dd")
     private Date updated_At;
 
     public Project(){
@@ -45,20 +62,20 @@ public class Project {
         this.projectIdentifier = projectIdentifier;
     }
 
-    public String getDescprtion() {
-        return descprtion;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDescprtion(String descprtion) {
-        this.descprtion = descprtion;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public Date getSteart_date() {
-        return steart_date;
+    public Date getStart_date() {
+        return start_date;
     }
 
-    public void setSteart_date(Date steart_date) {
-        this.steart_date = steart_date;
+    public void setStart_date(Date start_date) {
+        this.start_date = start_date;
     }
 
     public Date getEnd_date() {

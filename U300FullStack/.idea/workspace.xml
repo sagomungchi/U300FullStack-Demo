@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec81998d-2d82-48a2-99fd-60801fbf3111" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/topping/topping/repository/ProjectRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/topping/controllers/ProjectController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/topping/services/ProjectService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/topping/topping/domain/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/topping/topping/domain/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/topping/topping/repository/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/topping/topping/repositories/ProjectRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/topping/topping/domain/Project.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/topping/topping/domain/Project.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -35,10 +39,18 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.37011495" />
+    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -68,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572444185613</updated>
-      <workItem from="1572444187383" duration="838000" />
+      <workItem from="1572444187383" duration="2830000" />
     </task>
     <servers />
   </component>
