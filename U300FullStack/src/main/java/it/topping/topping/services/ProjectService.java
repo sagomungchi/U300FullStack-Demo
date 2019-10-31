@@ -1,4 +1,4 @@
-package it.topping.services;
+package it.topping.topping.services;
 
 import it.topping.topping.domain.Project;
 import it.topping.topping.repositories.ProjectRepository;

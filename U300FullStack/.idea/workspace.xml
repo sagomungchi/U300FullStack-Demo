@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec81998d-2d82-48a2-99fd-60801fbf3111" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/topping/controllers/ProjectController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/topping/services/ProjectService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/topping/topping/domain/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/topping/topping/domain/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/topping/topping/repository/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/topping/topping/repositories/ProjectRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/topping/controllers/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/topping/topping/controllers/ProjectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/topping/services/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/topping/topping/services/ProjectService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/topping/controllers/ProjectController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/topping/services/ProjectService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/it/topping/topping/domain/Project.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/topping/topping/domain/Project.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,6 +51,11 @@
     <property name="project.structure.side.proportion" value="0.37011495" />
     <property name="settings.editor.selected.configurable" value="preferences.customizations" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="it.topping.topping" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -80,7 +84,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572444185613</updated>
-      <workItem from="1572444187383" duration="2830000" />
+      <workItem from="1572444187383" duration="5519000" />
+      <workItem from="1572489077557" duration="3035000" />
     </task>
     <servers />
   </component>
@@ -92,7 +97,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
