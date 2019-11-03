@@ -35,8 +35,6 @@ public class ProjectService {
     public Iterable<Project> findAllProject(){
         return projectRepository.findAll();
     }
-<<<<<<< HEAD
-=======
 
     public void deleteProjectByIdentifier(String projectId){
         Project project = projectRepository.findByProjectIdentifier(projectId.toUpperCase());
@@ -46,8 +44,5 @@ public class ProjectService {
         }
 
         projectRepository.delete(project);
-
     }
-
->>>>>>> develope
 }
