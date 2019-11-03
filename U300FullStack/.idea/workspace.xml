@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ec81998d-2d82-48a2-99fd-60801fbf3111" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/topping/topping/controllers/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/topping/topping/controllers/ProjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/topping/topping/repositories/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/topping/topping/repositories/ProjectRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/topping/topping/domain/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/topping/topping/domain/Project.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/topping/topping/services/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/topping/topping/services/ProjectService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/it/topping/topping/controllers/ProjectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/topping/topping/controllers/ProjectController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/it/topping/topping/repositories/ProjectRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/topping/topping/repositories/ProjectRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/it/topping/topping/services/ProjectService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/topping/topping/services/ProjectService.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
