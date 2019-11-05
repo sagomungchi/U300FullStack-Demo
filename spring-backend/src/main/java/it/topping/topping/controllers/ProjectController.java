@@ -1,5 +1,6 @@
 package it.topping.topping.controllers;
 
+import it.topping.topping.domain.Money;
 import it.topping.topping.services.MapValidationErrorService;
 import it.topping.topping.services.ProjectService;
 import it.topping.topping.domain.Project;
@@ -27,10 +28,10 @@ public class ProjectController {
 
         ResponseEntity<?> errorMap = mapValidationErrorService.MapValidationService(result);
         if(errorMap != null) return errorMap;
-
         Project newProject = projectService.saveOrUpdateProject(project);
         return new ResponseEntity<Project>(newProject, HttpStatus.CREATED);
     }
+
 
     @GetMapping("/{projectId}")
     public ResponseEntity<?> getProjectById(@PathVariable String projectId){

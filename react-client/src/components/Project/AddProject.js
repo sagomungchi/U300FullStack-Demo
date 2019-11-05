@@ -12,6 +12,7 @@ class AddProject extends Component {
       projectName: "",
       projectIdentifier: "",
       description: "",
+      goalMoney: "",
       start_date: "",
       end_date: "",
       errors:{}
@@ -39,6 +40,7 @@ class AddProject extends Component {
       projectName: this.state.projectName,
       projectIdentifier: this.state.projectIdentifier,
       description: this.state.description,
+      goalMoney: this.state.goalMoney,
       start_date: this.state.start_date,
       end_date: this.state.end_date
     };
@@ -97,6 +99,20 @@ class AddProject extends Component {
                           {errors.description && (
                             <div className="invalid-feedback">{errors.description}</div>
                           )}
+                      </div>
+                      <div className="form-group">
+                          <input type="text"
+                                className={classnames("form-control form-control-lg", {
+                                  "is-invalid":errors.goalMoney
+                                })}
+                                placeholder="Goal Money"
+                                name="goalMoney"
+                                value={this.state.goalMoney}
+                                onChange={this.onChange}
+                                />
+                              {errors.goalMoney && (
+                                <div className="invalid-feedback">{errors.goalMoney}</div>
+                              )}
                       </div>
                       <h6>Start Date</h6>
                       <div className="form-group">

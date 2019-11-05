@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Date;
 
@@ -13,6 +14,10 @@ public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @OneToOne
+    @JoinColumn(name = "money_id")
+    private Money money;
 
     @NotBlank(message = "Project Name is Required")
     private String projectName;
@@ -24,6 +29,9 @@ public class Project {
 
     @NotBlank(message = "Project Description is required")
     private String description;
+
+    @NotNull(message = "Project Goal Money is required")
+    private Integer goalMoney;
 
     @JsonFormat(pattern = "yyyy-mm-dd")
     private Date start_date;
@@ -100,6 +108,23 @@ public class Project {
 
     public void setUpdated_At(Date updated_At) {
         this.updated_At = updated_At;
+    }
+
+    public Money getMoney() {
+        return money;
+    }
+
+    public Integer getGoalMoney() {
+        return goalMoney;
+    }
+
+    public void setGoalMoney(Integer goalMoney) {
+        this.goalMoney = goalMoney;
+    }
+
+    public Money setMoney(Integer goalMoney) {
+        this.money = new Money(goalMoney);
+        return money;
     }
 
     @PrePersist

@@ -1,7 +1,9 @@
 package it.topping.topping.services;
 
+import it.topping.topping.domain.Money;
 import it.topping.topping.domain.Project;
 import it.topping.topping.exceptions.ProjectIdException;
+import it.topping.topping.repositories.MoneyRepository;
 import it.topping.topping.repositories.ProjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,8 +14,13 @@ public class ProjectService {
     @Autowired
     private ProjectRepository projectRepository;
 
+    @Autowired
+    private MoneyRepository moneyRepository;
+
     public Project saveOrUpdateProject(Project project){
         try {
+            Money money = project.setMoney(project.getGoalMoney());
+            moneyRepository.save(money);
             project.setProjectIdentifier(project.getProjectIdentifier().toUpperCase());
             return projectRepository.save(project);
         } catch (Exception e){

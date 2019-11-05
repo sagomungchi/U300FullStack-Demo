@@ -63,3 +63,332 @@ img {
 .form-control::placeholder {
   color: #bbb !important;
 }
+
+.progress-bar {
+  width: 0;
+  animation: progress 1.5s ease-in-out forwards;
+
+  .title {
+    opacity: 0;
+    animation: show 0.35s forwards ease-in-out 0.5s;
+  }
+}
+
+@keyframes progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.header-bg {
+  position: relative;
+  background-image: url(./static/img/images.jpg);
+  height: 205px;
+  background-size: cover;
+}
+
+.img-cover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.header-bg .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 2;
+  text-align: center;
+}
+
+.info-wrap {
+  margin: 15px;
+}
+
+.fir-clickcircle {
+  height: 80px;
+  width: 80px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.fir-image-figure {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+  text-decoration: none;
+}
+
+.fir-image-figure .caption,
+.fir-image-figure figcaption {
+  padding-left: 15px;
+}
+
+html.wf-active .fir-image-figure .fig-author-figure-title {
+  font-family: var(--fir-font-header);
+  font-size: 16px;
+}
+
+.fir-image-figure .fig-author-figure-title {
+  color: var(--fir-color-grey);
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
+    Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  margin-top: 2px;
+}
+
+.fir-imageover {
+  position: relative;
+  display: flex;
+}
+
+.fir-imageover-color {
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  background: var(--fir-blue-twitter-alpha);
+  background-image: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  animation: fadeInFadeOut 2s infinite;
+  top: 0;
+  left: 0;
+}
+
+.fir-imageover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: fadeInFadeOut 2s infinite;
+}
+
+/* 단계별 상태 스타일 */
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.step-box {
+  padding: 0 10px 10px 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+.step-state {
+  margin-top: 15px;
+}
+.step-state ul:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.step-state ul li {
+  float: left;
+  position: relative;
+  width: 20%; /* 5개 진행바를 5등분 */
+  padding-top: 50px; /* 진행바 영역 확보 */
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 12px;
+  color: #666;
+}
+.step-state ul li:first-child {
+  font-size: 13px;
+} /* 도전중, 달성 텍스트 영역 */
+.step-state ul li p:after {
+  position: absolute; /* absolute 기준은 li 영역 */
+  width: 41px;
+  height: 24px;
+  margin-right: -20px;
+  background: url(https://t1.daumcdn.net/cfile/tistory/241D463E58AFAEAB16)
+    no-repeat 0 0;
+  background-size: auto 24px;
+  background-position: -58px 0;
+  top: 0;
+  right: 0;
+  color: #fff;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: -0.5px;
+}
+.step-state ul li:first-child p {
+  padding-top: 6px;
+}
+.step-state ul li span {
+  display: block;
+  margin-top: 2px;
+  font-weight: normal;
+  color: #898989;
+  font-size: 12px;
+} /* 회색 진행바 생성 */
+.step-state ul li:before {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #ddd;
+  content: '';
+} /* 첫 번째 진행바 반만 생성*/
+.step-state ul li:nth-child(1):before {
+  left: 50%;
+} /* 마지막 진행바 반만 생성*/
+.step-state ul li:nth-child(5):before {
+  right: 50%;
+} /* 화살표 상태 아이콘 */
+.step-state ul li:after {
+  position: absolute;
+  top: 27px;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  background: url(https://t1.daumcdn.net/cfile/tistory/241D463E58AFAEAB16)
+    no-repeat 0 0;
+  background-size: auto 24px;
+  background-position: 0 0;
+  content: '';
+} /* 활성화 진행바 및 활성화 화살표 아이콘 표시 */ /* 활성화 상태바 */
+.step-state.step1 ul li:nth-child(1):before,
+.step-state.step2 ul li:nth-child(-n + 2):before,
+.step-state.step2-ing ul li:nth-child(-n + 2):before,
+.step-state.step3 ul li:nth-child(-n + 3):before,
+.step-state.step3-ing ul li:nth-child(-n + 3):before,
+.step-state.step4 ul li:nth-child(-n + 4):before,
+.step-state.step4-ing ul li:nth-child(-n + 4):before,
+.step-state.step5 ul li:nth-child(-n + 5):before {
+  background: #ff889b;
+} /* 활성화 아이콘 표시 */
+.step-state.step1 ul li:nth-child(1):after,
+.step-state.step2 ul li:nth-child(-n + 2):after,
+.step-state.step2-ing ul li:nth-child(-n + 2):after,
+.step-state.step3 ul li:nth-child(-n + 3):after,
+.step-state.step3-ing ul li:nth-child(-n + 3):after,
+.step-state.step4 ul li:nth-child(-n + 4):after,
+.step-state.step4-ing ul li:nth-child(-n + 4):after,
+.step-state.step5 ul li:nth-child(-n + 5):after {
+  background-position: -20px 0;
+} /* 도전 중일 경우의 1/2 영역 비활성화 상태바 영역 */
+.step-state ul li p:before {
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  right: 0;
+  height: 3px;
+  content: '';
+}
+.step-state.step2 ul li:nth-child(2) p:before,
+.step-state.step3 ul li:nth-child(3) p:before,
+.step-state.step4 ul li:nth-child(4) p:before {
+  background: #ddd;
+} /* "도전중" 텍스트 표시 */
+.step-state.step1 ul li:nth-child(1) p:after,
+.step-state.step2-ing ul li:nth-child(2) p:after,
+.step-state.step3-ing ul li:nth-child(3) p:after,
+.step-state.step4-ing ul li:nth-child(4) p:after {
+  content: '도전중';
+} /* "달성" 텍스트 표시 */
+.step-state.step2 ul li:nth-child(2) p:after,
+.step-state.step3 ul li:nth-child(3) p:after,
+.step-state.step4 ul li:nth-child(4) p:after,
+.step-state.step5 ul li:nth-child(5) p:after {
+  content: '달성';
+  right: 50%;
+}
+
+.slide {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+.carousel-inner {
+  width: 100%;
+  max-height: 400px !important;
+}
+
+.carousel-item {
+  max-height: 400px !important;
+}
+
+.carousel-caption > h1 {
+  max-width: 300px;
+}
+
+.card-text {
+  font-size: 0.7rem !important;
+}
+
+.main-project-section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.main-project-section-text {
+  font-weight: 0 !important;
+}
+
+.project-card-img-top {
+  height: 140px;
+}
+
+.project-card-body {
+  max-height: 175px !important;
+}
+
+.project-card-info-text {
+  font-size: 0.8rem !important;
+}
+
+.project-card-info-text-sub {
+  font-size: 0.6rem !important;
+}
+
+.project-card-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.project-card-link:hover {
+  text-decoration: none;
+  color: #000000;
+}
+
+.card:hover {
+  transform: scale(1.001) translateY(-0.1px);
+  transition: all 0.35s ease-in-out;
+  box-shadow: 1px 15px 35px -10px rgba(0, 0, 0, 0.4);
+}
+
+.sort-btn {
+  margin-left: 15px;
+}
+
+.sort-button-section {
+  margin-top: 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+a > li {
+  text-decoration: none;
+}
